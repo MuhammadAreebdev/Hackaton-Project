@@ -1,0 +1,146 @@
+/* Explore Page Content Styles */
+
+.explore-banner {
+    padding: 20px 0 40px;
+}
+
+.banner-card {
+    background: var(--dark-green);
+    border-radius: var(--radius-lg);
+    padding: 60px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.banner-card .eyebrow {
+    color: #a7f3d0;
+}
+
+.banner-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: #fff;
+    max-width: 800px;
+}
+
+.banner-desc {
+    font-size: 16px;
+    opacity: 0.8;
+    color: #e5e7eb;
+}
+
+/* Explore Grid */
+.explore-grid-section {
+    padding-bottom: 100px;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* Filter Sidebar */
+.explore-sidebar {
+    display: flex;
+    height: 100%;
+}
+
+.filter-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+    width: 100%;
+    height: 100%;
+}
+
+.filter-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 48px;
+    letter-spacing: -0.02em;
+}
+
+.filter-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.filter-select,
+.filter-input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #fdfcf9;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    font-size: 14px;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.filter-select:focus,
+.filter-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+}
+
+/* Feed List */
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.requests-list .request-card {
+    background: #fdfcf9;
+    transition: var(--transition);
+}
+
+.requests-list .request-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-card {
+        position: relative;
+        top: 0;
+        margin-bottom: 40px;
+    }
+
+    .banner-title {
+        font-size: 36px;
+    }
+
+    .banner-card {
+        padding: 40px;
+    }
+}

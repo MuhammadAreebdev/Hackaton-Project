@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | HelpHub AI</title>
+    <meta name="description" content="Browse help requests with filterable community context on HelpHub AI.">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assetes/css/style.css">
+    <!-- Explore Specific Style -->
+    <link rel="stylesheet" href="assetes/css/helphub-explore.css">
+</head>
+
+<body class="explore-page">
+    <!-- Navbar -->
+    <header class="navbar explore-nav">
+        <div class="container nav-pill">
+            <div class="logo">
+                <span class="logo-icon">H</span>
+                <span class="logo-text">HelpHub AI</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Dashboard</a>
+                <a href="helphub-explore.html" class="active">Explore</a>
+                <a href="helphub-leaderboard.html">Leaderboard</a>
+                <a href="helphub-notifications.html">Notification</a>
+                <a href="helphub-messages.html">Messages</a>
+                <a href="helphub-profile.html">Profile</a>
+            </nav>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Explore Banner -->
+        <section class="explore-banner">
+            <div class="container">
+                <div class="banner-card">
+                    <span class="eyebrow">EXPLORE / FEED</span>
+                    <h1 class="banner-title">Browse help requests with filterable community context.</h1>
+                    <p class="banner-desc">Filter by category, urgency, skills, and location to surface the best
+                        matches.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Grid -->
+        <section class="explore-grid-section">
+            <div class="container explore-grid">
+                <!-- Sidebar -->
+                <aside class="explore-sidebar">
+                    <div class="filter-card">
+                        <span class="eyebrow">FILTERS</span>
+                        <h2 class="filter-title">Refine the feed</h2>
+
+                        <div class="filter-groups">
+                            <div class="filter-group">
+                                <label>Category</label>
+                                <select class="filter-select">
+                                    <option>All categories</option>
+                                    <option>Web Development</option>
+                                    <option>Design</option>
+                                    <option>Career</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Urgency</label>
+                                <select class="filter-select">
+                                    <option>All urgency levels</option>
+                                    <option>High</option>
+                                    <option>Medium</option>
+                                    <option>Low</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Skills</label>
+                                <input type="text" class="filter-input" placeholder="React, Figma, Git/GitHub">
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Location</label>
+                                <input type="text" class="filter-input" placeholder="Karachi, Lahore, Remote">
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Feed -->
+                <div class="explore-feed">
+                    <div class="requests-list">
+                        <!-- Request Card 1 -->
+                        <div class="request-card">
+                            <div class="card-tags">
+                                <span class="tag tag-green">Web Development</span>
+                                <span class="tag tag-red">High</span>
+                                <span class="tag tag-green">Solved</span>
+                            </div>
+                            <h3 class="request-title">Need help</h3>
+                            <p class="request-excerpt">helpn needed</p>
+                            <div class="request-footer">
+                                <div class="user-info">
+                                    <span class="user-name">Ayesha Khan</span>
+                                    <span class="user-meta">Karachi • 1 helper interested</span>
+                                </div>
+                                <a href="helphub_request_detail.html" class="btn btn-pill btn-white">Open details</a>
+                            </div>
+                        </div>
+
+                        <!-- Request Card 2 -->
+                        <div class="request-card">
+                            <div class="card-tags">
+                                <span class="tag tag-green">Web Development</span>
+                                <span class="tag tag-red">High</span>
+                                <span class="tag tag-green">Solved</span>
+                            </div>
+                            <h3 class="request-title">Need help making my portfolio responsive before demo day</h3>
+                            <p class="request-excerpt">My HTML/CSS portfolio breaks on tablets and I need layout
+                                guidance before tomorrow evening.</p>
+                            <div class="sub-tags">
+                                <span>HTML/CSS</span>
+                                <span>Responsive</span>
+                                <span>Portfolio</span>
+                            </div>
+                            <div class="request-footer">
+                                <div class="user-info">
+                                    <span class="user-name">Sara Noor</span>
+                                    <span class="user-meta">Karachi • 1 helper interested</span>
+                                </div>
+                                <a href="helphub_request_detail.html" class="btn btn-pill btn-white">Open details</a>
+                            </div>
+                        </div>
+
+                        <!-- Request Card 3 -->
+                        <div class="request-card">
+                            <div class="card-tags">
+                                <span class="tag tag-teal">Design</span>
+                                <span class="tag tag-orange">Medium</span>
+                                <span class="tag tag-blue">Open</span>
+                            </div>
+                            <h3 class="request-title">Looking for Figma feedback on a volunteer event poster</h3>
+                            <p class="request-excerpt">I have a draft poster for a campus community event and want
+                                sharper hierarchy, spacing, and CTA copy.</p>
+                            <div class="sub-tags">
+                                <span>Figma</span>
+                                <span>Poster</span>
+                                <span>Design Review</span>
+                            </div>
+                            <div class="request-footer">
+                                <div class="user-info">
+                                    <span class="user-name">Ayesha Khan</span>
+                                    <span class="user-meta">Lahore • 1 helper interested</span>
+                                </div>
+                                <a href="helphub_request_detail.html" class="btn btn-pill btn-white">Open details</a>
+                            </div>
+                        </div>
+
+                        <!-- Request Card 4 -->
+                        <div class="request-card">
+                            <div class="card-tags">
+                                <span class="tag tag-blue">Career</span>
+                                <span class="tag tag-green">Low</span>
+                                <span class="tag tag-green">Solved</span>
+                            </div>
+                            <h3 class="request-title">Need mock interview support for internship applications</h3>
+                            <p class="request-excerpt">Applying to frontend internships and need someone to practice
+                                behavioral and technical interview questions with me.</p>
+                            <div class="sub-tags">
+                                <span>Interview Prep</span>
+                                <span>Career</span>
+                                <span>Frontend</span>
+                            </div>
+                            <div class="request-footer">
+                                <div class="user-info">
+                                    <span class="user-name">Sara Noor</span>
+                                    <span class="user-meta">Remote • 2 helpers interested</span>
+                                </div>
+                                <a href="helphub_request_detail.html" class="btn btn-pill btn-white">Open details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Mobile Side Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text" style="font-weight: 700; font-size: 18px; color: var(--secondary);">Menu</span>
+            <button class="close-menu" id="closeMenuBtn" aria-label="Close menu">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="helphub-explore.html" class="active">Explore</a>
+            <a href="helphub-leaderboard.html">Leaderboard</a>
+            <a href="helphub-notifications.html">Notification</a>
+            <a href="helphub-messages.html">Messages</a>
+            <a href="helphub-profile.html">Profile</a>
+        </nav>
+    </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        }
+
+        if(hamburgerBtn) hamburgerBtn.addEventListener('click', toggleMenu);
+        if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+        if(menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

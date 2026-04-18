@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HelpHub AI - Notifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assetes/css/style.css">
+  <link rel="stylesheet" href="assetes/css/helphub-notifications.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar explore-nav">
+    <div class="container nav-pill">
+      <div class="logo">
+        <span class="logo-icon">H</span>
+        <span class="logo-text">HelpHub AI</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="helphub-explore.html">Explore</a>
+        <a href="helphub-leaderboard.html">Leaderboard</a>
+        <a href="helphub-notifications.html" class="active">Notification</a>
+        <a href="helphub-messages.html">Messages</a>
+        <a href="helphub-profile.html">Profile</a>
+      </nav>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-label">NOTIFICATIONS</div>
+    <h1>Stay updated on requests, helpers, and trust signals.</h1>
+  </section>
+
+  <!-- Notification Feed -->
+  <section class="feed-card">
+    <div class="feed-label">LIVE UPDATES</div>
+    <h2 class="feed-title">Notification feed</h2>
+
+    <div class="notification-list">
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">"Need help" was marked as solved</div>
+          <div class="notification-meta">Status • Just now</div>
+        </div>
+        <button class="status-pill">Unread</button>
+      </div>
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">Ayesha Khan offered help on "Need help"</div>
+          <div class="notification-meta">Match • Just now</div>
+        </div>
+        <button class="status-pill">Unread</button>
+      </div>
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">Your request "Need help" is now live in the community feed</div>
+          <div class="notification-meta">Request • Just now</div>
+        </div>
+        <button class="status-pill">Unread</button>
+      </div>
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">"Need help making my portfolio responsive before demo day" was marked as
+            solved</div>
+          <div class="notification-meta">Status • Just now</div>
+        </div>
+        <button class="status-pill">Unread</button>
+      </div>
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">"Need help making my portfolio responsive before demo day" was marked as
+            solved</div>
+          <div class="notification-meta">Status • Just now</div>
+        </div>
+        <button class="status-pill">Unread</button>
+      </div>
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">"Need help making my portfolio responsive before demo day" was marked as
+            solved</div>
+          <div class="notification-meta">Status • Just now</div>
+        </div>
+        <button class="status-pill">Unread</button>
+      </div>
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">New helper matched to your responsive portfolio request</div>
+          <div class="notification-meta">Match • 12 min ago</div>
+        </div>
+        <button class="status-pill">Unread</button>
+      </div>
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">Your trust score increased after a solved request</div>
+          <div class="notification-meta">Reputation • 1 hr ago</div>
+        </div>
+        <button class="status-pill">Unread</button>
+      </div>
+
+      <div class="notification-item">
+        <div class="notification-content">
+          <div class="notification-title">AI Center detected rising demand for interview prep</div>
+          <div class="notification-meta">Insight • Today</div>
+        </div>
+        <button class="status-pill read">Read</button>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Toggle Unread <-> Read on click
+    const pills = document.querySelectorAll('.status-pill');
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        if (pill.classList.contains('read')) {
+          pill.classList.remove('read');
+          pill.textContent = 'Unread';
+        } else {
+          pill.classList.add('read');
+          pill.textContent = 'Read';
+        }
+      });
+    });
+  </script>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Side Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="logo-text" style="font-weight: 700; font-size: 18px; color: var(--secondary);">Menu</span>
+      <button class="close-menu" id="closeMenuBtn" aria-label="Close menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="helphub-explore.html">Explore</a>
+      <a href="helphub-leaderboard.html">Leaderboard</a>
+      <a href="helphub-notifications.html" class="active">Notifications</a>
+      <a href="helphub-messages.html">Messages</a>
+      <a href="helphub-profile.html">Profile</a>
+    </nav>
+  </div>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+    }
+
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', toggleMenu);
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+    if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+  </script>
+</body>
+
+</html>

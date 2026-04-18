@@ -1,0 +1,239 @@
+/* 
+   Help Request Detail - Premium Styling 
+   Standardized layout for HelpHub AI 
+*/
+
+/* Reset & Base */
+.detail-page {
+    background: var(--bg-mesh);
+    min-height: 100vh;
+}
+
+/* Header Section */
+.request-header {
+    padding: 20px 0 32px;
+}
+
+.header-card {
+    background: var(--dark-green);
+    border-radius: var(--radius-lg);
+    padding: 60px;
+    color: #fff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.header-tags {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.header-title {
+    font-size: 56px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    max-width: 900px;
+}
+
+.header-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+}
+
+/* Grid Layout */
+.request-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+    padding-bottom: 80px;
+}
+
+.detail-card {
+    background: #fff;
+    border-radius: 32px;
+    padding: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-left,
+.grid-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.grid-left .detail-card:last-child {
+    flex: 1;
+}
+
+/* AI Summary Section */
+.ai-branding {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 16px;
+}
+
+.ai-icon {
+    width: 32px;
+    height: 32px;
+    background: #0d9488;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.ai-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.summary-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.summary-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pill-tag {
+    background: #f0f7f6;
+    color: #447b74;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Actions Section */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Requester Section */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* CRITICAL: Fix for giant avatars */
+.user-avatar-small {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #e2e8f0;
+    flex-shrink: 0;
+}
+
+.user-avatar-small img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-handle {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Helpers Section */
+.helpers-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 16px 0 24px;
+    letter-spacing: -0.01em;
+}
+
+.helpers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.helper-card {
+    background: #fcfbf8;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.helper-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.avatar-circle.ak {
+    background: #f97316;
+}
+
+.avatar-circle.ha {
+    background: #eab308;
+}
+
+.helper-info {
+    flex: 1;
+}
+
+.helper-name {
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+    .request-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-title {
+        font-size: 40px;
+    }
+
+    .header-card {
+        padding: 40px;
+    }
+}

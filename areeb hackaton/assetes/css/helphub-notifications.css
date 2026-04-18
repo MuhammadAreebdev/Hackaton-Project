@@ -1,0 +1,157 @@
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f0ec 0%, #f5ede0 50%, #fce8d4 100%);
+    color: #1f2937;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    max-width: 1280px;
+    margin: 40px auto;
+    background: #1d2d2b;
+    border-radius: 20px;
+    padding: 56px 64px;
+    color: white;
+    width: calc(100% - 96px);
+  }
+
+  .hero-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #a7f3d0;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #fff;
+  }
+
+  .feed-card {
+    max-width: 1280px;
+    margin: 0 auto 48px auto;
+    background: #fdfcf9;
+    border-radius: 20px;
+    padding: 40px 48px;
+    border: 1px solid #fdfcf9;
+    width: calc(100% - 96px);
+  }
+
+  .feed-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d7c6a;
+    margin-bottom: 14px;
+  }
+
+  .feed-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1f2937;
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+  }
+
+  /* Notification Items */
+  .notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4px;
+    border-bottom: 1px solid #ede4d0;
+    gap: 20px;
+  }
+
+  .notification-item:last-child {
+    border-bottom: none;
+  }
+
+  .notification-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .notification-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .notification-meta {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  .status-pill {
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    background: white;
+    color: #1f2937;
+    border: 1px solid #e5e0d1;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .status-pill:hover {
+    background: #f9f5ea;
+  }
+
+  .status-pill.read {
+    color: #6b7280;
+    background: #f5eedf;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 40px 32px;
+      width: calc(100% - 48px);
+    }
+
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .feed-card {
+      padding: 32px 28px;
+      width: calc(100% - 48px);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: 32px 24px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+    }
+
+    .feed-card {
+      padding: 24px 20px;
+    }
+
+    .feed-title {
+      font-size: 26px;
+    }
+  }

@@ -1,0 +1,187 @@
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 16px 64px 64px;
+    gap: 20px;
+  }
+
+  .left-card {
+    background: #1c3d35;
+    border-radius: 26px;
+    padding: 56px 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .community-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 22px;
+  }
+
+  .left-card h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+
+  .left-card p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: rgba(255,255,255,0.68);
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+
+  .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  .feature-list li::before {
+    content: '•';
+    color: rgba(255,255,255,0.45);
+    flex-shrink: 0;
+  }
+
+  .right-card {
+    background: #f7f6f2;
+    border-radius: 26px;
+    padding: 56px 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.05);
+  }
+
+  .login-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: #1a8a78;
+    margin-bottom: 14px;
+  }
+
+  .right-card h2 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.4px;
+    color: #0f0f0f;
+    margin-bottom: 38px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #ddd9d0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .form-control:focus {
+    border-color: #1a6b5e;
+    box-shadow: 0 0 0 3px rgba(26,107,94,0.09);
+  }
+
+  select.form-control {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 38px;
+    cursor: pointer;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .form-row .form-group { margin-bottom: 0; }
+
+  .btn-primary {
+    width: 100%;
+    padding: 15.5px;
+    background: #1a8a78;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.15px;
+    margin-top: 4px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: #157a69; transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+
+  /* Responsive Adjustments for Full-Width Layout */
+  @media (max-width: 1024px) {
+    .hero {
+      flex-direction: column;
+      padding: 32px 24px;
+    }
+    .left-card, .right-card {
+      width: 100%;
+      padding: 40px 32px;
+    }
+    .left-card h1 {
+      font-size: 32px;
+    }
+  }

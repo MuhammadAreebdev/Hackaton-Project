@@ -1,0 +1,252 @@
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f0ec 0%, #f5ede0 50%, #fce8d4 100%);
+    color: #1f2937;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    max-width: 1280px;
+    margin: 40px auto;
+    background: #1d2d2b;
+    border-radius: 20px;
+    padding: 56px 64px;
+    color: white;
+    width: calc(100% - 96px);
+  }
+
+  .hero-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #a7f3d0;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    color: #e5e7eb;
+    max-width: 800px;
+    line-height: 1.5;
+    opacity: 0.8;
+  }
+
+  /* Main Grid */
+  .main-grid {
+    max-width: 1280px;
+    margin: 0 auto 48px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    width: calc(100% - 96px);
+  }
+
+  .panel {
+    background: #fdfcf9;
+    border-radius: 20px;
+    padding: 40px 36px;
+    border: 1px solid #fdfcf9;
+  }
+
+  .panel-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d7c6a;
+    margin-bottom: 14px;
+  }
+
+  .panel-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #1f2937;
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+  }
+
+  /* Ranking Card */
+  .ranking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ranking-card {
+    background: white;
+    border: 1px solid #ece4d1;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .avatar-ak {
+    background: #0d7c6a;
+  }
+
+  .avatar-ha {
+    background: #1f2937;
+  }
+
+  .avatar-sn {
+    background: linear-gradient(135deg, #f59e0b 0%, #fb923c 100%);
+  }
+
+  .ranking-body {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ranking-left {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ranking-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 4px;
+  }
+
+  .ranking-tags {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  .ranking-right {
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .ranking-score {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 4px;
+  }
+
+  .ranking-contrib {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  /* Badge System */
+  .badge-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .badge-card {
+    background: white;
+    border: 1px solid #ece4d1;
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+
+  .badge-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+  }
+
+  .badge-title {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+
+  .progress-track {
+    height: 8px;
+    background: #ece4d1;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f59e0b 0%, #eab308 30%, #10b981 70%, #0d7c6a 100%);
+    border-radius: 999px;
+    transition: width 1.2s ease;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 40px 32px;
+      width: calc(100% - 48px);
+    }
+
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .main-grid {
+      grid-template-columns: 1fr;
+      width: calc(100% - 48px);
+    }
+
+    .panel-title {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: 32px 24px;
+    }
+
+    .hero h1 {
+      font-size: 30px;
+    }
+
+    .panel {
+      padding: 28px 22px;
+    }
+
+    .panel-title {
+      font-size: 26px;
+    }
+
+    .ranking-body {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .ranking-right {
+      text-align: left;
+    }
+  }

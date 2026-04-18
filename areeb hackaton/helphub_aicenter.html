@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HelpHub AI - AI Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assetes/css/style.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    background: #ede9e0;
+    background-image:
+      radial-gradient(ellipse at 0% 0%, rgba(170,215,200,0.5) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(248,215,180,0.55) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 5%, rgba(230,220,195,0.3) 0%, transparent 40%);
+    padding-bottom: 60px;
+  }
+
+  .hero-banner {
+    background: #1c3d35;
+    border-radius: 22px;
+    margin-top: 28px;
+    padding: 44px 52px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-banner::after {
+    content: '';
+    position: absolute;
+    right: -40px; top: -60px;
+    width: 260px; height: 260px;
+    background: radial-gradient(circle, rgba(26,138,120,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 16px;
+  }
+
+  .hero-banner h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.07;
+    letter-spacing: -2px;
+    color: #fff;
+    margin-bottom: 18px;
+    max-width: 680px;
+  }
+
+  .hero-banner p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+
+
+  /* ── STATS CARDS ROW ── */
+  .stats-section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .stat-card {
+    background: #f7f6f2;
+    border-radius: 18px;
+    padding: 32px 30px 34px;
+    box-shadow: 0 1px 16px rgba(0,0,0,0.04);
+  }
+
+  .stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 14px;
+  }
+
+  .stat-card h2 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #111;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+
+  .stat-card p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  /* ── RECOMMENDATIONS SECTION ── */
+  .reco-section {
+    margin-top: 20px;
+    background: #f7f6f2;
+    border-radius: 22px;
+    padding: 40px 40px 44px;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.04);
+  }
+
+  .reco-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px;
+  }
+
+  .reco-section h2 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    color: #111;
+    margin-bottom: 28px;
+    line-height: 1.1;
+  }
+
+  /* ── REQUEST CARDS ── */
+  .request-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 26px 28px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  }
+
+  .request-card:last-child { margin-bottom: 0; }
+
+  .request-card h3 {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .request-card p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.65;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1.5px solid #ddd9d0;
+    color: #444;
+    background: transparent;
+    letter-spacing: 0.1px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar explore-nav">
+      <div class="container nav-pill">
+          <div class="logo">
+              <span class="logo-icon">H</span>
+              <span class="logo-text">HelpHub AI</span>
+          </div>
+
+          <nav class="nav-links">
+              <a href="index.html">Dashboard</a>
+              <a href="#">Create Request</a>
+              <a href="helphub_aicenter.html" class="active">AI Center</a>
+          </nav>
+          <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26" stroke-width="2">
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+          </button>
+      </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+      <!-- HERO BANNER -->
+    <div class="hero-banner">
+      <p class="hero-label">AI Center</p>
+      <h1>See what the platform intelligence is noticing.</h1>
+      <p>AI-like insights summarize demand trends, helper readiness, urgency signals, and request recommendations.</p>
+    </div>
+
+    <!-- STATS CARDS -->
+
+  <div class="stats-section">
+
+    <div class="stat-card">
+      <p class="stat-label">Trend Pulse</p>
+      <h2>Web<br>Development</h2>
+      <p>Most common support area based on active community requests.</p>
+    </div>
+
+    <div class="stat-card">
+      <p class="stat-label">Urgency Watch</p>
+      <h2>2</h2>
+      <p>Requests currently flagged high priority by the urgency detector.</p>
+    </div>
+
+    <div class="stat-card">
+      <p class="stat-label">Mentor Pool</p>
+      <h2>2</h2>
+      <p>Trusted helpers with strong response history and contribution signals.</p>
+    </div>
+
+  </div>
+
+  <!-- RECOMMENDATIONS SECTION -->
+  <div class="reco-section">
+    <p class="reco-label">AI Recommendations</p>
+    <h2>Requests needing attention</h2>
+
+    <!-- Card 1 -->
+    <div class="request-card">
+      <h3>Need help</h3>
+      <p>AI summary: Web Development request with high urgency. Best suited for members with relevant expertise.</p>
+      <div class="tags">
+        <span class="tag">Web Development</span>
+        <span class="tag">High</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="request-card">
+      <h3>Need help making my portfolio responsive before demo day</h3>
+      <p>Responsive layout issue with a short deadline. Best helpers are frontend mentors comfortable with CSS grids and media queries.</p>
+      <div class="tags">
+        <span class="tag">Web Development</span>
+        <span class="tag">High</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="request-card">
+      <h3>Looking for Figma feedback on a volunteer event poster</h3>
+      <p>A visual design critique request where feedback on hierarchy, spacing, and messaging would create the most value.</p>
+      <div class="tags">
+        <span class="tag">Design</span>
+        <span class="tag">Medium</span>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="request-card">
+      <h3>Need mock interview support for internship applications</h3>
+      <p>Career coaching request focused on confidence-building, behavioral answers, and entry-level frontend interviews.</p>
+      <div class="tags">
+        <span class="tag">Career</span>
+        <span class="tag">Low</span>
+      </div>
+    </div>
+
+  </div>
+
+    </div>
+  </main>
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Mobile Side Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text" style="font-weight: 700; font-size: 18px; color: var(--secondary);">Menu</span>
+            <button class="close-menu" id="closeMenuBtn" aria-label="Close menu">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="#">Create Request</a>
+            <a href="helphub_aicenter.html" class="active">AI Center</a>
+        </nav>
+    </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        }
+
+        if(hamburgerBtn) hamburgerBtn.addEventListener('click', toggleMenu);
+        if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+        if(menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

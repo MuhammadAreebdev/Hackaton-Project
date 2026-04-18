@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HelpHub AI - Leaderboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assetes/css/style.css">
+  <link rel="stylesheet" href="assetes/css/helphub-leaderboard.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar explore-nav">
+    <div class="container nav-pill">
+      <div class="logo">
+        <span class="logo-icon">H</span>
+        <span class="logo-text">HelpHub AI</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="helphub-explore.html">Explore</a>
+        <a href="helphub-leaderboard.html" class="active">Leaderboard</a>
+        <a href="helphub-notifications.html">Notification</a>
+        <a href="helphub-messages.html">Messages</a>
+        <a href="helphub-profile.html">Profile</a>
+      </nav>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-label">LEADERBOARD</div>
+    <h1>Recognize the people who keep the community moving.</h1>
+    <p>Trust score, contribution count, and badges create visible momentum for reliable helpers.</p>
+  </section>
+
+  <!-- Main Grid -->
+  <div class="main-grid">
+
+    <!-- Rankings Panel -->
+    <div class="panel">
+      <div class="panel-label">TOP HELPERS</div>
+      <h2 class="panel-title">Rankings</h2>
+
+      <div class="ranking-list">
+
+        <div class="ranking-card">
+          <div class="avatar avatar-ak">AK</div>
+          <div class="ranking-body">
+            <div class="ranking-left">
+              <div class="ranking-name">#1 Ayesha Khan</div>
+              <div class="ranking-tags">React, Tailwind, Accessibility</div>
+            </div>
+            <div class="ranking-right">
+              <div class="ranking-score">96%</div>
+              <div class="ranking-contrib">32 contributions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ranking-card">
+          <div class="avatar avatar-ha">HA</div>
+          <div class="ranking-body">
+            <div class="ranking-left">
+              <div class="ranking-name">#2 Hassan Ali</div>
+              <div class="ranking-tags">JavaScript, React, Git/GitHub</div>
+            </div>
+            <div class="ranking-right">
+              <div class="ranking-score">88%</div>
+              <div class="ranking-contrib">24 contributions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ranking-card">
+          <div class="avatar avatar-sn">SN</div>
+          <div class="ranking-body">
+            <div class="ranking-left">
+              <div class="ranking-name">#3 Sara Noor</div>
+              <div class="ranking-tags">Python, Data Analysis</div>
+            </div>
+            <div class="ranking-right">
+              <div class="ranking-score">74%</div>
+              <div class="ranking-contrib">11 contributions</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Badges Panel -->
+    <div class="panel">
+      <div class="panel-label">BADGE SYSTEM</div>
+      <h2 class="panel-title">Trust and achievement</h2>
+
+      <div class="badge-list">
+
+        <div class="badge-card">
+          <div class="badge-name">Ayesha Khan</div>
+          <div class="badge-title">Mentor • Accessibility Pro</div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 96%;"></div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-name">Hassan Ali</div>
+          <div class="badge-title">Code Rescuer • Bug Hunter</div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 88%;"></div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-name">Sara Noor</div>
+          <div class="badge-title">Community Voice</div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 74%;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Animate progress bars on load
+    window.addEventListener('load', () => {
+      const fills = document.querySelectorAll('.progress-fill');
+      fills.forEach(fill => {
+        const finalWidth = fill.style.width;
+        fill.style.width = '0%';
+        setTimeout(() => {
+          fill.style.width = finalWidth;
+        }, 150);
+      });
+    });
+  </script>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Mobile Side Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="logo-text" style="font-weight: 700; font-size: 18px; color: var(--secondary);">Menu</span>
+      <button class="close-menu" id="closeMenuBtn" aria-label="Close menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="26" height="26" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="helphub-explore.html">Explore</a>
+      <a href="helphub-leaderboard.html" class="active">Leaderboard</a>
+      <a href="helphub-notifications.html">Notification</a>
+      <a href="helphub-messages.html">Messages</a>
+      <a href="helphub-profile.html">Profile</a>
+    </nav>
+  </div>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+    }
+
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', toggleMenu);
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+    if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+  </script>
+</body>
+
+</html>
